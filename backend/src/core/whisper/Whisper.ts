@@ -2,10 +2,12 @@ import IWhisper from "./IWhisper";
 
 class Whisper implements IWhisper{
 
+  id:string;
   content: string;
   date: Date;
 
-  constructor({content, date} :IWhisper) {
+  constructor({id,content, date} :IWhisper) {
+    this.id = id;
     this.content = content;
     this.date = date;
   }
@@ -17,8 +19,13 @@ class Whisper implements IWhisper{
     return this.date;
   }
 
+  getId(): string {
+    return this.id;
+  }
+
   get() :IWhisper {
     return {
+      id: this.id,
       content: this.content,
       date: this.date
     }
