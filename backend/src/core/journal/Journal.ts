@@ -12,8 +12,8 @@ class Journal implements IJournal{
   listWhispers(): IWhisper[] {
       return this.whispers;
   }
-  addWhispers(text) {
-      this.whispers.push(text);
+  addWhispers(whisper: IWhisper): void {
+      this.whispers.push(whisper);
   }
 }
 
