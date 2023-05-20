@@ -25,7 +25,7 @@ class Whisper implements IWhisper{
     return this.id;
   }
 
-  getisPrivate(): boolean {
+  getIsPrivate(): boolean {
     return this.isPrivate;
   }
 

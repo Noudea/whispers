@@ -15,8 +15,7 @@ describe('Whisper', () => {
     expect(whisper).toBeInstanceOf(Whisper);
     expect(whisper.getContent()).toBe(whisperData.content);
     expect(whisper.getDate()).toBe(whisperData.date);
-    expect(whisper.getisPrivate()).toBe(whisperData.isPrivate);
-
+    expect(whisper.getIsPrivate()).toBe(whisperData.isPrivate);
     expect(whisper).toEqual(whisperData)
   });
 
