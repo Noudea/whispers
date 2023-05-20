@@ -4,10 +4,12 @@ import IWhisper from "../whisper/IWhisper";
 
 class Journal implements IJournal{
 
+  public id: string;
   public whispers: IWhisper[];
 
-  constructor({whispers} :{whispers : IWhisper[]}) {
-      this.whispers = whispers;
+  constructor({id,whispers} : IJournal) {
+    this.id = id;
+    this.whispers = whispers;
   }
   getWhispers(): IWhisper[] {
       return this.whispers;
@@ -16,8 +18,13 @@ class Journal implements IJournal{
       this.whispers.push(whisper);
   }
 
+  getId(): string {
+    return this.id;
+  }
+
   get() :IJournal {
     return {
+      id: this.id,
       whispers: this.whispers
     }
   }

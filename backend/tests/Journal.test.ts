@@ -6,6 +6,7 @@ import Journal from "../src/core/journal/Journal";
 describe('Journal', () => {
 
   const journalData = {
+    id : uuidv4(),
     whispers: [
       new Whisper({
         id: uuidv4(),
@@ -34,6 +35,12 @@ describe('Journal', () => {
     expect(journalObject).toEqual(journalData);
   })
 
+  it('should return the correct values when calling getId() method', () => {
+    const journal = new Journal(journalData);
+    const journalId = journal.getId();
+    expect(journalId).toEqual(journalData.id);
+  })
+
   it('should return the correct values when calling getWhispers() method', () => {
     const journal = new Journal(journalData);
     const whispers = journal.getWhispers();
@@ -41,7 +48,7 @@ describe('Journal', () => {
   })
 
   it('should add a whisper to the journal', () => {
-    const journal = new Journal({ whispers: [...journalData.whispers] });
+    const journal = new Journal({ id : journalData.id ,whispers: [...journalData.whispers] });
     const whisper = new Whisper({
       id: uuidv4(),
       content: 'Test whisper content',
