@@ -7,13 +7,19 @@ class Journal implements IJournal{
   public whispers: IWhisper[];
 
   constructor({whispers} :{whispers : IWhisper[]}) {
-      this.whispers = [];
+      this.whispers = whispers;
   }
-  listWhispers(): IWhisper[] {
+  getWhispers(): IWhisper[] {
       return this.whispers;
   }
-  addWhispers(whisper: IWhisper): void {
+  addWhisper(whisper: IWhisper): void {
       this.whispers.push(whisper);
+  }
+
+  get() :IJournal {
+    return {
+      whispers: this.whispers
+    }
   }
 }
 
