@@ -1,95 +1,34 @@
-import Image from 'next/image'
+import Whisper from "@/components/atoms/whisper/Whisper";
 import styles from './page.module.css'
+import WhisperList from "@/components/molecules/WhisperList/WhisperList";
+import WhisperHightlight from "@/components/atoms/whisperHightlight/WhisperHightlight";
 
 export default function Home() {
+
+
+  const whispers = [
+    {
+      id: 1,
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec vulputate ante, sit amet congue velit. Nullam at nulla et metus ultrices elementum vitae tristique risus.',
+      date: '23 janvier 2021'
+    },
+    {
+      id: 2,
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec vulputate ante, sit amet congue velit. Nullam at nulla et metus ultrices elementum vitae tristique risus.',
+      date: '23 janvier 2021'
+    },
+    {
+      id: 3,
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec vulputate ante, sit amet congue velit. Nullam at nulla et metus ultrices elementum vitae tristique risus.',
+      date: '23 janvier 2021'
+    }
+  ]
+
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <>
+      <WhisperList whispers={whispers} />
+      <WhisperHightlight />
+    </>
   )
 }

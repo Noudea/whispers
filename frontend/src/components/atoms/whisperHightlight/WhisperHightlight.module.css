@@ -1,0 +1,8 @@
+.whisperHightlight {
+  position: absolute;
+  top:0;
+  left:0;
+  border-radius: 8px;
+  background-color: #f4f5f6;
+  z-index: -1;
+}

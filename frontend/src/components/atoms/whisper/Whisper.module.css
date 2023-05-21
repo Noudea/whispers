@@ -1,0 +1,39 @@
+
+
+
+
+.whisper {
+  --transition-duration: 200ms;
+  --transition-timing-function: ease;
+  position: relative;
+}
+
+.date {
+  position: absolute;
+  top: 10px;
+  left: -150px;
+  opacity: 0.3;
+}
+
+.content {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.unblur {
+  transition-duration: var(--transition-duration);
+  transition-timing-function: ease-in;
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.blur {
+  transition-duration: var(--transition-duration);
+  transition-timing-function: ease-in;
+  filter: blur(4px);
+  backdrop-filter: blur(4px);
+  opacity: 0.3;
+  transition: filter 2s ease,-webkit-filter 2s ease
+  /*transition-timing-function: ease-in;*/
+  /*transition-duration: var(--transition-duration);*/
+}
