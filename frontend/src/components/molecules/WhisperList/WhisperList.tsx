@@ -1,5 +1,5 @@
 "use client";
-import Whisper from "@/components/atoms/whisper/Whisper";
+import Whisper from "@/components/atoms/Whisper/Whisper";
 
 
 const WhisperList = ({ whispers }) => {

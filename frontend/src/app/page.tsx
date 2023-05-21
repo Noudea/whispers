@@ -1,7 +1,5 @@
-import Whisper from "@/components/atoms/whisper/Whisper";
-import styles from './page.module.css'
 import WhisperList from "@/components/molecules/WhisperList/WhisperList";
-import WhisperHightlight from "@/components/atoms/whisperHightlight/WhisperHightlight";
+import WhisperHightlight from "@/components/atoms/WhisperHightlight/WhisperHightlight";
 
 export default function Home() {
 
