@@ -5,12 +5,12 @@ import {AppContext, IAppContext} from "@/context/AppContext";
 
 
 const AppContextProvider: React.FC = ({ children }) => {
-  const [bgData, setBgData] = useState('');
+  const [whisperHightlightData, setWhisperHightlightData] = useState('');
 
   // Value object to be provided by the context
   const contextValue: IAppContext = {
-    bgData,
-    setBgData,
+    whisperHightlightData,
+    setWhisperHightlightData,
   };
 
   return <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>;

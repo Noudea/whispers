@@ -4,17 +4,17 @@ import {useAppContext} from "@/context/AppContext";
 
 const WhisperHightlight = () => {
 
-  const { bgData } = useAppContext();
+  const { whisperHightlightData } = useAppContext();
 
 
   return(
     <>
       <style jsx>{`
       .hightlight {
-      height: ${bgData.height}px;
-      width: ${bgData.width}px;
-      opacity: ${bgData.visible ? 1 : 0};
-       transform: translate3d(${bgData.left}px, ${bgData.top}px, 0px);
+      height: ${whisperHightlightData.height}px;
+      width: ${whisperHightlightData.width}px;
+      opacity: ${whisperHightlightData.visible ? 1 : 0};
+       transform: translate3d(${whisperHightlightData.left}px, ${whisperHightlightData.top}px, 0px);
        will-change: transform,height,opacity;
       -webkit-transition-property: height,opacity;
       -webkit-transition-duration: 0.3s;

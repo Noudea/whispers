@@ -14,14 +14,14 @@ const Whisper = ({
   const [isHover,setIsHover] = useState(false)
 
   const elementRef = useRef(null);
-  const { bgData, setBgData } = useAppContext();
+  const { whisperHightlightData, setWhisperHightlightData } = useAppContext();
 
 
   const onMouseEnter = () => {
     const element = elementRef.current;
     if (element) {
       const { top, left, height, width } = element.getBoundingClientRect();
-      setBgData({top,left,height,width,visible: true})
+      setWhisperHightlightData({top,left,height,width,visible: true})
     }
 
     setIsBlurred(false)
@@ -29,8 +29,8 @@ const Whisper = ({
   }
 
   const onMouseLeave = () => {
-    setBgData({...bgData,visible: false})
-    console.log(bgData)
+    setWhisperHightlightData({...whisperHightlightData,visible: false})
+    console.log(whisperHightlightData)
     setIsBlurred(true)
     setIsHover(false)
   }

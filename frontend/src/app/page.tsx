@@ -1,5 +1,6 @@
 import WhisperList from "@/components/molecules/WhisperList/WhisperList";
 import WhisperHightlight from "@/components/atoms/WhisperHightlight/WhisperHightlight";
+import WhisperInput from "@/components/atoms/Whisperinput/WhisperInput";
 
 export default function Home() {
 
@@ -25,6 +26,7 @@ export default function Home() {
 
   return (
     <>
+      <WhisperInput></WhisperInput>
       <WhisperList whispers={whispers} />
       <WhisperHightlight />
     </>
