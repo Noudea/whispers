@@ -1,17 +1,21 @@
 .whisperInput {
   width: 100%;
-  /*border: none;*/
   padding: 12px 16px;
   resize: none;
   overflow-y: hidden;
-  /*position: relative;*/
   line-height: 24px;
   height: 48px;
   border: 0px;
-  /*margin-top: 24px;*/
   background: transparent;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.whisperInput:hover {
+  background-color: #f4f5f6;
 }
 
 .whisperInput:focus {
   outline: none;
+  background-color: #f4f5f6;
 }

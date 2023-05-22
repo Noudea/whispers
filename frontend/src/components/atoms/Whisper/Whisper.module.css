@@ -1,7 +1,3 @@
-
-
-
-
 .whisper {
   --transition-duration: 200ms;
   --transition-timing-function: ease;
@@ -16,7 +12,7 @@
 }
 
 .content {
-  padding: 16px 16px;
+  padding: 12px 12px;
   border-radius: 5px;
 }
 

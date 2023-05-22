@@ -5,7 +5,7 @@ import {AppContext, IAppContext} from "@/context/AppContext";
 
 
 const AppContextProvider: React.FC = ({ children }) => {
-  const [whisperHightlightData, setWhisperHightlightData] = useState('');
+  const [whisperHightlightData, setWhisperHightlightData] = useState({});
 
   // Value object to be provided by the context
   const contextValue: IAppContext = {

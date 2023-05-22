@@ -4,8 +4,9 @@ import {useEffect, useRef} from "react";
 import {useAppContext} from "@/context/AppContext";
 
 const WhisperInput = () => {
+
   const textareaRef = useRef(null);
-  const { whisperHightlightData, setWhisperHightlightData } = useAppContext();
+  const { setWhisperHightlightData } = useAppContext();
 
   const autoSize = (event) => {
     const textarea = textareaRef.current;
@@ -23,36 +24,35 @@ const WhisperInput = () => {
     }
   }
 
+  const init = () => {
+    const textarea = textareaRef.current;
+    textarea.focus()
+    setHightlightPos()
+  }
+
+  const setHightlightPos = () => {
+    const element = textareaRef.current;
+    if (element) {
+      const { top, left, height, width } = element.getBoundingClientRect();
+      setWhisperHightlightData({top,left,height,width,visible: false})
+    }
+  }
+
   useEffect(() => {
+    init()
     // Attach the event listener when the component mounts
     window.addEventListener("keydown", autoSize);
-
     // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("keydown", autoSize);
     };
   }, []);
 
-
-  const onMouseEnter = () => {
-    const element = textareaRef.current;
-    if (element) {
-      const { top, left, height, width } = element.getBoundingClientRect();
-      setWhisperHightlightData({top,left,height,width,visible: true})
-    }
-  }
-
-  const onMouseLeave = () => {
-    setWhisperHightlightData({...whisperHightlightData,visible: false})
-    console.log(whisperHightlightData)
-  }
-
   return (
     <>
-      <textarea onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} ref={textareaRef} placeholder={`What's on your mind today ?`} className={`${styles.whisperInput} whisperInput`} type="text" />
+      <textarea ref={textareaRef} placeholder={`What's on your mind today ?`} className={`${styles.whisperInput} whisperInput`} type="text" />
     </>
   )
 }
-
 
 export default WhisperInput

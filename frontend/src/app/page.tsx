@@ -1,6 +1,7 @@
 import WhisperList from "@/components/molecules/WhisperList/WhisperList";
 import WhisperHightlight from "@/components/atoms/WhisperHightlight/WhisperHightlight";
 import WhisperInput from "@/components/atoms/Whisperinput/WhisperInput";
+import Divider from "@/components/Divider/Divider";
 
 export default function Home() {
 
@@ -25,10 +26,11 @@ export default function Home() {
 
 
   return (
-    <>
+    <div>
       <WhisperInput></WhisperInput>
+      <Divider />
       <WhisperList whispers={whispers} />
       <WhisperHightlight />
-    </>
+    </div>
   )
 }
