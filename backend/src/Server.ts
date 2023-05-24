@@ -2,14 +2,14 @@ import {
   FastifyInstance
 } from "fastify"
 import Fastify from 'fastify'
-import Config from "./config/Config";
-import Router from "./infrastructure/routes/Router";
+import Config from "./config/Config"
+import Router from "./infrastructure/routes/Router"
 
 
 
 class Server {
   private app: FastifyInstance
-  private port = Config.getInstance().PORT;
+  private port = Config.getInstance().PORT
 
   constructor() {
     this.app = Fastify()

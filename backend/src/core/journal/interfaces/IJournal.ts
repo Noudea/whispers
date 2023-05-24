@@ -1,4 +1,4 @@
-import IWhisper from "../whisper/IWhisper";
+import IWhisper from "../../whisper/interfaces/IWhisper"
 
 interface IJournal {
   id: string;

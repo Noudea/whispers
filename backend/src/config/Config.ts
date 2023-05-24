@@ -1,8 +1,8 @@
-import * as dotenv from "dotenv";
+import * as dotenv from "dotenv"
 
 
 class Config {
-  private static instance: Config;
+  private static instance: Config
   public readonly PORT: number
   public readonly API_VERSION: string
 
@@ -29,11 +29,11 @@ class Config {
   }
 
   private checkEnv(): void {
-    const propNames = Object.keys(this);
+    const propNames = Object.keys(this)
     for (const propName of propNames) {
       // Check for the presence of the corresponding environment variable
       if (!process.env[propName.toUpperCase()]) {
-        throw new Error(`${propName} is required`);
+        throw new Error(`${propName} is required`)
       }
     }
   }
@@ -41,11 +41,11 @@ class Config {
 
   static getInstance(): Config {
     if (!Config.instance) {
-      Config.instance = new Config();
+      Config.instance = new Config()
     }
-    return Config.instance;
+    return Config.instance
   }
 
 }
 
-export default Config;
+export default Config

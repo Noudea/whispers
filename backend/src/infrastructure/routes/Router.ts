@@ -1,14 +1,14 @@
-import {FastifyInstance, FastifyReply, FastifyRequest, HTTPMethods} from "fastify";
-import Config from "../../config/Config";
-import routes from './routes';
+import {FastifyInstance, FastifyReply, FastifyRequest, HTTPMethods} from "fastify"
+import Config from "../../config/Config"
+import routes from './routes'
 
 class Router {
-  private fastify: FastifyInstance;
+  private fastify: FastifyInstance
   private routes: any[]
 
   constructor(fastify: FastifyInstance) {
-    this.fastify = fastify;
-    this.routes = routes;
+    this.fastify = fastify
+    this.routes = routes
   }
 
   public registerRoutes(): void {

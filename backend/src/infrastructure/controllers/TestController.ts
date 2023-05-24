@@ -1,4 +1,4 @@
-import { FastifyReply, FastifyRequest} from "fastify";
+import { FastifyReply, FastifyRequest} from "fastify"
 
 class TestController {
 
@@ -8,4 +8,4 @@ class TestController {
 
 }
 
-export default TestController;
+export default TestController

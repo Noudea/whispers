@@ -1,32 +1,32 @@
-import IWhisper from "./IWhisper";
+import IWhisper from "../interfaces/IWhisper"
 
 class Whisper implements IWhisper{
 
-  id:string;
-  content: string;
-  date: Date;
-  isPrivate: boolean;
+  id:string
+  content: string
+  date: Date
+  isPrivate: boolean
 
   constructor({id,content, date, isPrivate} :IWhisper) {
-    this.id = id;
-    this.content = content;
-    this.date = date;
-    this.isPrivate = isPrivate;
+    this.id = id
+    this.content = content
+    this.date = date
+    this.isPrivate = isPrivate
   }
 
   getContent(): string {
-    return this.content;
+    return this.content
   }
   getDate(): Date {
-    return this.date;
+    return this.date
   }
 
   getId(): string {
-    return this.id;
+    return this.id
   }
 
   getIsPrivate(): boolean {
-    return this.isPrivate;
+    return this.isPrivate
   }
 
   get() :IWhisper {

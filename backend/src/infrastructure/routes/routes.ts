@@ -1,4 +1,4 @@
-import controllers from "../controllers/Controllers";
+import controllers from "../controllers/Controllers"
 
 
 const routes = [
