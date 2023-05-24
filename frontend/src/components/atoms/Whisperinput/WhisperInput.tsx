@@ -3,7 +3,7 @@ import styles from "./WhisperInput.module.css"
 import {useEffect, useRef} from "react";
 import {useAppContext} from "@/context/AppContext";
 
-const WhisperInput = () => {
+const WhisperInput = ({placeholder}:{placeholder: string}) => {
 
   const textareaRef = useRef(null);
   const { setWhisperHightlightData } = useAppContext();
@@ -50,7 +50,7 @@ const WhisperInput = () => {
 
   return (
     <>
-      <textarea ref={textareaRef} placeholder={`What's on your mind today ?`} className={`${styles.whisperInput} whisperInput`} type="text" />
+      <textarea ref={textareaRef} placeholder={placeholder} className={`${styles.whisperInput} whisperInput`} type="text" />
     </>
   )
 }

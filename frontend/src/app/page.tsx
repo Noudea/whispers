@@ -2,6 +2,9 @@ import WhisperList from "@/components/molecules/WhisperList/WhisperList";
 import WhisperHightlight from "@/components/atoms/WhisperHightlight/WhisperHightlight";
 import WhisperInput from "@/components/atoms/Whisperinput/WhisperInput";
 import Divider from "@/components/Divider/Divider";
+import Title from "@/components/atoms/Title/Title";
+import Logo from "@/components/atoms/logo/Logo";
+import Image from "next/image"
 
 export default function Home() {
 
@@ -27,7 +30,8 @@ export default function Home() {
 
   return (
     <div>
-      <WhisperInput></WhisperInput>
+      <Title title="What's on your mind today ?" />
+      <WhisperInput placeholder={'Write your thoughts'}></WhisperInput>
       <Divider />
       <WhisperList whispers={whispers} />
       <WhisperHightlight />

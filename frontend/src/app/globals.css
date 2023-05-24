@@ -17,7 +17,8 @@ body {
   overflow-x: hidden;
 }
 
-body{
-  padding: 200px;
+main {
+margin:auto;
+max-width: 764px;
 }
 
