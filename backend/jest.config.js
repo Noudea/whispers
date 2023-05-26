@@ -3,5 +3,8 @@ module.exports = {
   testEnvironment: "node",
   coveragePathIgnorePatterns : [
     "<rootDir>/build/*"
-  ]
-};
+  ],
+  moduleNameMapper: {
+    '^mocks/(.*)$': '<rootDir>/tests/mocks/$1',
+  },
+}
