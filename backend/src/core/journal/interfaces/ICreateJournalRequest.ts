@@ -1,9 +1,9 @@
 import IWhisper from "../../whisper/interfaces/IWhisper"
 
-interface IJournal {
+interface ICreateJournalRequest {
   id: string;
   whispers: IWhisper[];
   userId: string;
 }
 
-export default IJournal
+export default ICreateJournalRequest

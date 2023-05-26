@@ -6,10 +6,12 @@ class Journal implements IJournal{
 
   public id: string
   public whispers: IWhisper[]
+  public userId: string
 
-  constructor({id,whispers} : IJournal) {
+  constructor({id,whispers,userId} : IJournal) {
     this.id = id
-    this.whispers = whispers
+    this.whispers = whispers,
+    this.userId = userId
   }
   getWhispers(): IWhisper[] {
     return this.whispers
@@ -23,10 +25,7 @@ class Journal implements IJournal{
   }
 
   get() :IJournal {
-    return {
-      id: this.id,
-      whispers: this.whispers
-    }
+    return this
   }
 }
 

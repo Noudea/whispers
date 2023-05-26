@@ -1,6 +1,7 @@
 import IWhisper from "../../whisper/interfaces/IWhisper"
+import ICreateJournalRequest from "../interfaces/ICreateJournalRequest"
 
-class CreateJournalRequest {
+class CreateJournalRequest implements ICreateJournalRequest{
 
   public readonly id: string
   public readonly whispers: IWhisper[]
@@ -10,7 +11,7 @@ class CreateJournalRequest {
   constructor({
     id,
     whispers,
-    userId}) {
+    userId}: ICreateJournalRequest) {
     this.id = id
     this.whispers = whispers
     this.userId = userId

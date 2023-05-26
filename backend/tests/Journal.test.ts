@@ -20,7 +20,8 @@ describe('Journal', () => {
         date: new Date(),
         isPrivate : true
       })
-    ]
+    ],
+    userId: uuidv4()
   }
 
   it('should create a new instance of Journal with the correct values', () => {
@@ -48,7 +49,7 @@ describe('Journal', () => {
   })
 
   it('should add a whisper to the journal', () => {
-    const journal = new Journal({ id : journalData.id ,whispers: [...journalData.whispers] })
+    const journal = new Journal({ id : journalData.id ,whispers: [...journalData.whispers],userId: journalData.userId })
     const whisper = new Whisper({
       id: uuidv4(),
       content: 'Test whisper content',
