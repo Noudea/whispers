@@ -1,0 +1,58 @@
+version: "3"
+
+services:
+
+  whispers_frontend:
+    image: arm64v8/node:16
+    container_name: whispers_frontend
+    volumes:
+      - ./frontend:/whispers/frontend
+    working_dir: /whispers/frontend
+    ports:
+      - "3000:3000"
+    command: bash -c "yarn install && yarn dev"
+    depends_on:
+      - whispers_backend
+    networks:
+      - whispers_network
+
+  whispers_backend:
+    image: arm64v8/node:16
+    container_name: whispers_backend
+    volumes:
+      - ./backend:/whispers/backend
+    working_dir: /whispers/backend
+    ports:
+      - "8000:8000"
+    command: bash -c "yarn install && yarn start:local"
+    depends_on:
+      - whispers_postgres
+    networks:
+      - whispers_network
+
+  whispers_postgres:
+    container_name: whispers_postgres
+    image: postgres:latest
+    volumes:
+      - ./backend/database/postgresql:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: admin
+      POSTGRES_DB : password
+    ports:
+      - "5432:5432"
+    networks:
+      - whispers_network
+
+  whispers_adminer:
+    container_name: whispers_adminer
+    image: adminer
+    ports:
+      - "8001:8080"
+    depends_on:
+      - whispers_postgres
+    networks:
+      - whispers_network
+
+networks:
+  whispers_network:

@@ -1,13 +1,12 @@
+"use client"
 import WhisperList from "@/components/molecules/WhisperList/WhisperList";
 import WhisperHightlight from "@/components/atoms/WhisperHightlight/WhisperHightlight";
 import WhisperInput from "@/components/atoms/Whisperinput/WhisperInput";
 import Divider from "@/components/Divider/Divider";
 import Title from "@/components/atoms/Title/Title";
-import Logo from "@/components/atoms/logo/Logo";
-import Image from "next/image"
+
 
 export default function Home() {
-
 
   const whispers = [
     {
@@ -26,7 +25,6 @@ export default function Home() {
       date: '23 janvier 2021'
     }
   ]
-
 
   return (
     <div>

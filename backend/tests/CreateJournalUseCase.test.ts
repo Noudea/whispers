@@ -43,4 +43,14 @@ describe('CreateJournalUseCase', () => {
     expect(createJournalResponse).toBeInstanceOf(CreateJournalResponse)
   })
 
+
+  it('should return a CreateJournalResponse object with the journal property set correctly when calling execute() method', async() => {
+    const journalRepository = new JournalRepository()
+    const createJournalRequest = new CreateJournalRequest(sampleJournal)
+    const createJournalUseCase = new CreateJournalUseCase({request: createJournalRequest,repository: journalRepository})
+    const createJournalResponse = await createJournalUseCase.execute()
+    console.log(createJournalResponse)
+    expect(createJournalResponse.journal).toBe(sampleJournal)
+  })
+
 })
