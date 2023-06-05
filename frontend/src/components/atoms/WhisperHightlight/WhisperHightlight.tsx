@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import styles from './WhisperHightlight.module.css'
 import {useAppContext} from "@/context/AppContext";
 
@@ -9,12 +9,12 @@ const WhisperHightlight = () => {
   return(
     <>
       <style jsx>{`
-      .hightlight {
+      .highlight {
         height: ${whisperHightlightData.height}px;
         width: ${whisperHightlightData.width}px;
         opacity: ${whisperHightlightData.visible ? 1 : 0};
-         transform: translate3d(${whisperHightlightData.left}px, ${whisperHightlightData.top}px, 0px);
-         will-change: transform,height,opacity;
+        transform: translate3d(${whisperHightlightData.left}px, ${whisperHightlightData.top}px, 0px);
+        will-change: transform,height,opacity;
         -webkit-transition-property: height,opacity;
         -webkit-transition-duration: 0.3s;
         transition-duration: 0.3s;
@@ -23,7 +23,7 @@ const WhisperHightlight = () => {
         transition-property:transform, height, opacity;
       }
 `}</style>
-      <div className={`${styles.whisperHightlight} hightlight`}>
+      <div className={`${styles.whisperHighlight} highlight`}>
       </div>
     </>
   )

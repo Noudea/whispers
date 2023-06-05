@@ -12,10 +12,10 @@
 }
 
 .whisperInput:hover {
-  background-color: #f4f5f6;
+  background-color: var(--highlight-color);
 }
 
 .whisperInput:focus {
   outline: none;
-  background-color: #f4f5f6;
+  background-color: var(--highlight-color);
 }

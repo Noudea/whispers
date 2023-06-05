@@ -1,0 +1,6 @@
+.themeWrapper {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: inherit;
+  /*z-index: -2;*/
+}

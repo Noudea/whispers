@@ -1,5 +1,5 @@
 "use client"
-import Logo from "@/components/atoms/logo/Logo";
+import Logo from "@/components/atoms/Logo/Logo";
 import styles from './Header.module.css';
 
 const Header = () => {

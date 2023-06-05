@@ -23,14 +23,12 @@ const Whisper = ({
       const { top, left, height, width } = element.getBoundingClientRect();
       setWhisperHightlightData({top,left,height,width,visible: true})
     }
-
     setIsBlurred(false)
     setIsHover(true)
   }
 
   const onMouseLeave = () => {
     setWhisperHightlightData({...whisperHightlightData,visible: false})
-    console.log(whisperHightlightData)
     setIsBlurred(true)
     setIsHover(false)
   }

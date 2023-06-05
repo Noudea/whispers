@@ -2,7 +2,7 @@
 import WhisperList from "@/components/molecules/WhisperList/WhisperList";
 import WhisperHightlight from "@/components/atoms/WhisperHightlight/WhisperHightlight";
 import WhisperInput from "@/components/atoms/Whisperinput/WhisperInput";
-import Divider from "@/components/Divider/Divider";
+import Divider from "@/components/atoms/Divider/Divider";
 import Title from "@/components/atoms/Title/Title";
 
 
